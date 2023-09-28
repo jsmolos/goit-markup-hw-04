@@ -95,7 +95,7 @@ button {
     position: relative;
 }
 
-.main-header-menu-list-item:hover .main-header-menu-list-item link {
+.main-header-menu-list-item:hover .main-header-menu-list-item-link {
     color: var(--ocean);
 }
 
@@ -110,10 +110,13 @@ button {
     bottom: -25px;
 }
 
-.main-header-menu-list-item:hover .main-header-menu-list-item link {
-    width: 100%;
+.main-header-menu-list-item:hover .main-header-menu-list-item-link::after {
+    width: 100%;    
 }
 
+.main-header-list-item {
+    position: relative;
+}
 
 .footer-logo-link {
     color: var(--cloud);
@@ -320,6 +323,7 @@ button {
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0.4px;
+    margin-bottom: 8px;
 } 
 
 .our-team-list-item-decription {
@@ -329,6 +333,11 @@ button {
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.32px;
+    margin-bottom: 8px;
+}
+
+.team-socmed-list {
+    gap: 24px;
 }
 
 .team-socmed-list-item {
@@ -337,25 +346,24 @@ button {
     align-items: center;
     width: 40px;
     height: 40px;
+    background: var(--iris);
+    border-radius: 50%;
+    color: var(--cloud);
 }
 
-.team-socmed-list-item-icon li a {
+.team-socmed-list-item:hover {
+    background-color: var(--ocean);
+}
+
+.team-socmed-list-item-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    background: var(--iris);
-    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
-.team-socmed-list-item-icon li a:hover {
-    background: var(--ocean);
-}
-
-.team-socmed-list-item-icon li a svg{
-    fill: var(--white);
-}
 .customers {
     padding: 120px 0;
     width: 100%;
@@ -397,7 +405,7 @@ button {
     border: 1px solid var(--lightslate);
     transition: color 250ms cubic-bezier(0, 4, 0, 0, 2, 1);
     gap: 40px;
-    color: var(--lightslate);
+    fill: var(--iris);
 }
 
 .customers-list-item:hover {
@@ -405,7 +413,7 @@ button {
 }
 
 .customer-list-item-link {
-    color: var(--lightslate);
+    color: var(--iris);
 }
 
 .footer {
@@ -422,8 +430,57 @@ button {
     letter-spacing: 0.32px;
     text-transform: none;
 }
-.footer-socmed-list-item-icon {
+
+.footer-socmed {
+    color: var(--white);
+    display: flex;
+    float: right;
     flex-direction: column;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+
+.footer-socmed-title {
+    color: var(--cloud);
+    font-size: 18px;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: 0.54px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: s16px;
+}
+
+.footer-socmed-list {
+    gap: 16px; 
+}
+
+.footer-socmed-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--iris);
+    border-radius: 50%;
+    color: var(--cloud);
+    fill: currentColor; 
+}
+
+.footer-socmed-list-item:hover {
+    background-color: var(--green);
+}
+
+.footer-socmed-list-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 .portfolio {
