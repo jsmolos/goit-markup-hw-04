@@ -91,27 +91,18 @@ button {
     text-decoration: none;
 }
 
-.main-header-menu-list-item {
-    position: relative;
-}
-
-.main-header-menu-list-item:hover .main-header-menu-list-item-link {
-    color: var(--ocean);
-}
-
-.main-header-menu-list-item-link::after {
+.main-header-menu-list-item-link:hover::after {
     content: "";
+    display:block;
     height: 4px;
     width: 0px;
     background-color: var(--ocean);
-    border-radius: 2px;
+    border: 2px solid var(--ocean);
+    border-radius: 4px;
     position: absolute;
     left: 0;
     bottom: -25px;
-}
-
-.main-header-menu-list-item:hover .main-header-menu-list-item-link::after {
-    width: 100%;    
+    margin-top: 10px;
 }
 
 .main-header-list-item {
@@ -431,9 +422,14 @@ button {
     text-transform: none;
 }
 
+.footer-container {
+    width: 30%;
+    float: left;
+}
+
 .footer-socmed {
+    width: 70%;
     color: var(--white);
-    display: flex;
     float: right;
     flex-direction: column;
     font-size: 16px;
