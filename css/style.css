@@ -108,7 +108,7 @@ button {
 }
 
 .main-header-list-item:hover .main-header-menu-list-item-link::after {
-    width: 100px;
+    width: 100%;
 }
 
 .main-header-list-item {
